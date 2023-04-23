@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="renamerInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="b3ab3689-2aaa-4c37-97d2-e57247186744" />
+    <option name="reLastEntityCreationPackage" value="user_api/src/main/java/com/taeduong/user/domain/model" />
+  </component>
+</project>
