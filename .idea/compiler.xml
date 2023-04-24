@@ -10,11 +10,13 @@
         <module name="user_api" />
         <module name="product_api" />
         <module name="service_registry" />
+        <module name="cloud-gateway" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-gateway" options="-parameters" />
       <module name="product_api" options="-parameters" />
       <module name="service_registry" options="-parameters" />
       <module name="user_api" options="-parameters" />
