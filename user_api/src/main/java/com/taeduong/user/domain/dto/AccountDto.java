@@ -15,19 +15,19 @@ import java.util.List;
  */
 @Data
 public class AccountDto implements Serializable {
-    private final Long id;
-    private final String createBy;
-    private final Instant createDate;
-    private final String modifiedBy;
-    private final Instant modifiedDate;
-    private final String address;
-    private final Instant dob;
-    private final String email;
-    private final String fullname;
-    private final Byte gender;
-    private final String password;
-    private final String phoneNumber;
-    private final Boolean status;
-    private final String username;
-    private final List<Role> roles;
+    private Long id;
+    private String createBy;
+    private Instant createDate;
+    private String modifiedBy;
+    private Instant modifiedDate;
+    private String address;
+    private Instant dob;
+    private String email;
+    private String fullname;
+    private Byte gender;
+    private String password;
+    private String phoneNumber;
+    private Boolean status;
+    private String username;
+    private List<Role> roles;
 }

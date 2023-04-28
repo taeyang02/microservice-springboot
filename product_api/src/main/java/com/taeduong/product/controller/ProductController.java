@@ -1,7 +1,9 @@
 package com.taeduong.product.controller;
 
+import com.taeduong.product.VO.Account;
 import com.taeduong.product.service.IPorductService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.taeduong.product.domain.dto.ProductDto;
@@ -10,12 +12,14 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/api/products")
 @AllArgsConstructor
 public class ProductController {
     private final IPorductService productService;
+    private final RestTemplate restTemplate;
 
     @PostMapping("")
     public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto productDto) {
@@ -48,5 +52,11 @@ public class ProductController {
     public ResponseEntity<ProductDto> deleteProduct(@PathVariable Long id) {
         ProductDto deletedProductDto = productService.delete(id);
         return new ResponseEntity<>(deletedProductDto, HttpStatus.OK);
+    }
+
+    @GetMapping("get-user")
+    public ResponseEntity<?> getUser() {
+        Account account = restTemplate.getForObject("http://localhost:9001/api/accounts/1",Account.class);
+        return new ResponseEntity<>(account, HttpStatus.OK);
     }
 }
