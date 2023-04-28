@@ -10,10 +10,10 @@ import java.time.Instant;
  */
 @Data
 public class RoleDto implements Serializable {
-    private final Long id;
-    private final String createBy;
-    private final Instant createDate;
-    private final String modifiedBy;
-    private final Instant modifiedDate;
-    private final String name;
+    private Long id;
+    private String createBy;
+    private Instant createDate;
+    private String modifiedBy;
+    private Instant modifiedDate;
+    private String name;
 }
